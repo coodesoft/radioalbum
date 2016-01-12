@@ -1,0 +1,123 @@
+html,body {height: 100%;
+    background-image:linear-gradient(to top, rgba(100, 150, 100, 0.9) 0%,  rgba(100, 150, 100, 0.9) 100%),url(../images/index1.png);*/
+}
+
+.panel-gral{margin-top: 40px;background:rgba(0,0,0,0.8);color: #eeeeee;box-shadow: -8px 8px 15px rgba(45,45,45,0.8)}
+.panel-gral .panel-footer{background:rgba(85,85,85,0.8);color: #eeeeee;}
+.panel-gral .panel-heading{background:rgba(85,85,85,0.8);color: #eeeeee;}
+.panel-gral .panel-body{overflow:hidden;}
+
+.z-arriba{z-index: 400;}
+.z-medio{z-index: 200;}
+.z-abajo{z-index: 100;}
+
+.c-point{cursor:pointer;}
+
+.imgIndex{background:url(../images/index.png) no-repeat;}
+
+.div-info{
+	background-color: rgba(0,0,0,0.8);
+    padding: 4px 12px 14px 23px;
+    color: #cccccc;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {padding: 70px 15px 20px;}
+
+.footer {height: 60px;background-color: #f5f5f5;border-top: 1px solid #ddd;padding-top: 20px;}
+
+.jumbotron {text-align: center;background-color: transparent;}
+
+.jumbotron .btn {font-size: 21px;padding: 14px 24px;}
+
+.not-set {color: #c55;font-style: italic;}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/*barra de navegacion*/
+@media (min-width:1200px){  /* en caso de pantallas grandes*/
+    #w1 li{margin:5px;}
+    #w1 li a{font-size: 14pt;}
+    .navbar-header {margin:5px;}
+    .navbar-brand {font-size: 18pt;font-weight: bold;}
+}
+
+.navbar-brand {color:#aaaaaa !important; transition-duration:0.2s;}
+.navbar-brand:hover,#w1 li a:hover {color:#bbffbb!important;}
+
+
+.obj-hidden{
+	opacity: 0;
+ 	filter: alpha(opacity=00); 
+ 	transition: opacity .1s linear;
+   -moz-transition: opacity .1s linear;
+   -webkit-transition: opacity .1s linear;	
+}
+
+.obj-visible{
+	opacity: 1;
+ 	filter: alpha(opacity=100); 
+ 	transition: opacity .1s linear;
+   -moz-transition: opacity .1s linear;
+   -webkit-transition: opacity .1s linear;	
+ 		
+}
+

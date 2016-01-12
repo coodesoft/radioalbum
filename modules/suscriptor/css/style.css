@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+.suscription-confirmation{
+	margin-top: 100px;
+}
+
+.msg-success{
+	width: 50%;
+	margin: auto;
+	text-align: center;	
+	padding: 3%;
+	background: #101010;
+	color: #aaaaaa;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+

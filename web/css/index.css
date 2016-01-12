@@ -1,0 +1,21 @@
+.centrado{font-size:38px;text-align: center;}
+
+.alt-pie{height:65px;}
+
+#logo{width:100%;transition-duration:4s;}
+#logo:hover{transform:scale(0.5);}
+
+#lc{margin: 10%;}
+
+#Deco-Mic{height:353px;width:0px;position: absolute; right:0%;transition-duration:3s;}
+#Deco-Disc{height:0px;width:150px;transition-duration:3s;position: absolute; left:0%;bottom:60px;}
+
+#Deco-Mic-f{height:353px;width:270px;background-position: 100% 0%;}
+#Deco-Disc-f{height:150px;width:150px;background-position: 0% 77%;}
+
+.min-wbtn{min-width: 200px;}
+
+.Caja-exp{overflow: hidden;}
+
+#AlertaNav {cursor:pointer;}
+#AnJs{background-color:#aa5555;text-align:center;}

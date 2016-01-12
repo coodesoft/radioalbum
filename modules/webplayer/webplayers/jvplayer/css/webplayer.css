@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+#webplayer{background-position: 124% -13%;background-size: 110%;}
+
+#wp-controls{top: 61%;right:3%;width: 22%;height:26%;}
+
+#wp-controls .wp-button {border: 4px solid #aa2233;}
+
+#play,#pause{border-radius: 17%;width: 62px;height: 78px;right:6%;top:13%;background-size: 1600%;}
+
+#play{background-position:0.9% 41.5%;background-color:#EB7180;}
+
+#pause{background-position:0.5% 61.5%;background-color:#EBBF71;}
+
+#next, #prev {border-radius: 50%; background-size: 1550%;}
+
+#next{right: 49%;top:7%;background-position:3% 18%;width: 50px; height: 48px; background-color:#EB7180;}
+
+#prev{background-position: 3% 25.5%; right: 61%;top: 51%;width:35px; height:35px;background-color:#EB7180;}
+
+#prev:active{background-position: 3% 75.5%;background-color:#EBBF71;}
+
+#next:active{background-position: 3% 86%;background-color:#EBBF71;}
+
+#play[data-status='active']{background-position:1.5% 61.5%;background-color:#EBBF71;}
+
+#pause[data-status='active']{background-position:0.9% 41.5%;background-color:#EB7180;}
+
+#wp-volume-control{width: 100px;height: 100px;top: 284px;left:6%;border: 3px solid #ffdddd;border-radius: 50%;}
+
+#Actuador-Volumen{background-size: 916%;background-position: 0.2% 0%;}
+
+/********************************** SELECTOR ESTILOS ******************************************/
+#channels-next-control, #channels-prev-control, #albums-next-control, #albums-prev-control{background-size: 1500%;}
+
+.channel{background:#7d4646 !important;border: solid 1px #000000;border-radius: 50%;}
+
+#channels-next-control, #channels-prev-control{background-size: 1141%;}
+
+#channels-next-control{background-position: 43.5% 92.5%;background-size: 2000%;}
+
+#channels-prev-control{background-position: 39% 92.5%;background-size: 2000%;}
+
+#albums-prev-control{background-position: 58% 104%;}
+
+#albums-next-control{background-position: 66% 104%;}
+/*extras*/
+#channels-info-container,#channels-selected-info,#channels-hover-info{border-radius:10px;}
+#channels-list{border: 2px solid #aaaaaa;border-radius: 12px;}

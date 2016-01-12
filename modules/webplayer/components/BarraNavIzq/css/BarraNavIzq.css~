@@ -1,0 +1,44 @@
+#Cont-barra-izq{border: 2px solid #333333;background-color:#99bb99;height:53px;position: absolute; right: -5%;width:45px;top:47%;}
+
+#novedades{background-image:linear-gradient(to top, #ddddaa 0%,#ffff22 50%, #ffffaa 100%);}
+
+#cuadrado{width: 70%;height: 80%;margin-top: 10%;margin-left: 15%;border: 2px solid #777777;border-radius: 4px;background: #c8c8c8;}
+
+#cuadrado:hover{background: #dddddd;}
+
+#hay-mas{background-image:linear-gradient(to top, #aaddaa 0%,#00ff22 50%, #aaffaa 100%);}
+
+#info{position: absolute;top: -43%;left: -673%;
+width: 800%;height: 91px;background-color: #99bb99;box-shadow: -2px 4px 9px 3px #333333;
+border-radius: 38px;z-index: 1000;display:none;
+
+text-align: center;
+padding-top: 15px;
+font-size: 10pt;}
+
+#info-flecha{position: absolute;border-right: 53px solid #99bb99;
+border-top: 7px solid transparent;border-bottom: 17px solid transparent;width: 0px;
+height: 0px;z-index: 996;transform: rotate(231deg);top: 94%;left: 74%; opacity:0;}
+
+#cerrar-inf-b{border: 2px solid #555555;
+	border-radius: 5px;
+	height: 22px;
+	width: 22px;
+	top: -3px;
+	left:20px;
+	text-align: center;
+	color: #dddddd;
+	background-color:#669966; 
+	cursor:pointer;
+	position: relative;
+}
+
+#parametro-navizq{display:none;}
+
+.CuadroInfo{}
+
+.boton{height:35px;width: 35px;border-radius:10px;top:5px;cursor:pointer;left:2px;margin:2px;position: relative; border:3px solid #555555; display: inline-block;}
+
+.boton:hover{border-color:#dddddd;}
+
+.linea{width: 70%;margin-left: 15%;margin-top: 17%;border: 1px solid #777777;height: 13%;background: #777777;}

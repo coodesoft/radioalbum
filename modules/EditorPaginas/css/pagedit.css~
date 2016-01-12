@@ -1,0 +1,31 @@
+table tr:nth-child(even){background:#333333!important;}
+table tr:nth-child(odd){background:#335533!important;}
+td,tr,thead td,thead tr,th{border:1px solid #777777!important;}
+th{background:#666666!important;}
+th a{color:#dddddd!important;}
+
+.form-control{background-color: #444444!important; color:#dddddd !important;}
+
+.btn{font-weight:bold !important;}
+
+/* componente html editor */
+.PrevVisualArti{border:2px solid #777777;border-radius:15px;
+	height:50px;padding-left:30px!important;
+	margin:5px;background-image:linear-gradient(to top, #777777 0%,#888888 50%, #555555 100%);
+	padding-top: 6px;font-size: 14pt;
+	color: #cccccc;width:100%;
+}
+
+.contFecha{right: 20%;top: 15px;}
+
+.contFecha,.botAmpliarNot,.textoNot{position: absolute;}
+
+.PrevVisualArti:hover{color:#ffffff;}
+
+.botAmpliarNot{right: 45px;font-weight:bold!important;}
+
+.spoiler{position:relative;}
+
+.textoNot{display:none;width:94%;top: 60px;border-radius: 5px;
+	padding:10px;padding-left:20px;}
+

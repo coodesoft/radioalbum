@@ -1,0 +1,148 @@
+@CHARSET "UTF-8";
+
+
+#channels-next-control,
+#channels-prev-control,
+#albums-next-control,
+#albums-prev-control{
+	z-index: 1010;
+	cursor: pointer;
+	position: absolute;
+}
+
+
+#channel-images-container,
+#album-images-container{
+	z-index: 1001;
+	position: absolute;
+}
+
+
+#channels-raselector-wrapper,
+#albums-raselector-wrapper{
+	z-index: 1000;
+	position: absolute;
+}
+
+#channels-info-container{
+	position: absolute;
+	background: #000000 !important;
+}
+
+#channels-selected-info,
+#channels-hover-info{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 11px;
+	display: table;
+	background: none;
+	transition-duration:0.2s;
+	font-size: 12pt;
+	font-weight: bold;
+	border:3px solid #555555;
+	background:#000000;
+}
+
+#channels-selected-info{
+	color: #00ff00;
+}
+
+#channels-hover-info{
+	color: yellow;
+	z-index: 2000;
+}
+
+.channel{
+	cursor: pointer;
+}
+
+/**** Hover **/
+.channel:hover{border:3px solid orange;}
+
+.channel[data-status="active"]{ border: 3px solid green; }
+
+.albumImage{
+	width: 100%;
+	position: relative;
+}
+
+.album{
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#channels-list{
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	position: absolute;
+}
+
+#albums-list{
+	overflow: hidden;
+	position: absolute;
+}
+
+.hasLogoBackground{
+	background: url(/basic/modules/webplayer/images/logo-small.png) no-repeat;
+	background-size: 90%;
+	background-position: 50% 50%;
+}
+
+#albumsList{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+}
+
+.info-background,
+album-information,
+.albumImage,
+.album-extinfo{
+	position: absolute;
+}
+
+.info-background{
+	background: #000000;
+	opacity: 0;
+	
+}
+
+.album-extinfo{
+	text-align: center;
+	display: table;
+	opacity: 0;
+}
+
+.album-extinfo div{
+	position: relative;
+	display:block;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.album-extinfo span{
+	display:block;
+	color: #C8C7C7;
+}
+
+.album-extinfo .album-info{
+	font-weight: bold;
+}
+
+#albumsListe{
+	left: 0px;
+}
+
+#album-listen-container{
+	position: absolute;
+ 	overflow: hidden;
+	
+}
+
+#album-listen-container.active{
+	border-top: 1px solid grey;
+}

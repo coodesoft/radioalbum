@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+@media (min-width:452px){
+	#webplayer{margin-right:0%;width: 696px!important;height: 450px;} 
+	#ventana-rep{transform: scale(0.5);width: 200%;right: 278px;top: 2%;
+}
+	#wp-content-container{height: 279px;width:100%;}}
+@media (min-width:768px){
+	#ventana-rep{transform: none;width:auto;top:auto;right:auto;}
+	#webplayer{height:456px;margin-right:auto;width:auto;}}
+	#wp-content-container{height:456px;width:auto;}}
+@media (min-width:1200px){
+	#ventana-rep{transform: none;width:auto;top:auto;right:auto;}
+	#webplayer{height:450px;margin-right:auto;width:auto;}
+	#wp-content-container{height:450px;width:auto;}}
+
+#pre{width:200px;height:200px; border: 1px solid #000000;}
+/**************************** Radio Postal **********************************/
+
+#ventana-rep{overflow:hidden;padding:0%;}
+#playlist,#wp-audio-manipulaiton{display:none;}
+
+.hidden{display:none;}
+
+.visible{display:block;}
+
+h1{color:#dddddd;}
+
+
+
+
+
+#wp-volume-control:hover{border-color:#ffffff;}
+
+#wp-controls .wp-button:hover{border-color:#dddddd;}
+
+/* asociadas al volumen */
+#Display-Volumen{color:#22ff22;position:relative;background-color:#000000;border:1px solid #eeeeee;border-radius:5px;width:35px;text-align:center;
+	transition-duration:1s;z-index:9999;padding:5px;opacity:0;}
+
+
+#indica-carga{
+	background-color:#000000;
+	position:absolute;
+	height:118%;
+	width:100%;
+	top:0%;
+	left:5%;
+	border:8px solid #dddddd;
+	padding-top:25%;
+	padding-bottom:25%;
+	color:#ffffff;
+	font-size:50pt;
+	text-align:center;
+	z-index:3000;
+}
+
+
+
+/*** reproductores*/
+/*     webplayer gral */
+#webplayer{position:relative; z-index:100;width:100%;opacity:1;}
+#Actuador-Volumen{position:relative;cursor:pointer;z-index:101;}
+#wp-controls{position:absolute;z-index:101;}
+#wp-volume-control{position:absolute; z-index:101;}
+#wp-controls .wp-button {cursor:pointer; position:absolute;}
+.channel{z-index:101;}
+.transition-control{z-index:101;}
+#channels-selected-info{z-index:101;}
+#play,#pause{z-index: 99;}
+#play[data-status='active'],#pause[data-status='active']{z-index:55;}
+/*     webplayers     */
+*[data-resource='avplayer']{background:url("/basic/web/mods/webplayers/avplayer/images/img.png") no-repeat;}
+*[data-resource='bvplayer']{background:url("/basic/web/mods/webplayers/bvplayer/images/img.png") no-repeat;}
+*[data-resource='cvplayer']{background:url("/basic/web/mods/webplayers/cvplayer/images/img.png") no-repeat;}
+*[data-resource='dvplayer']{background:url("/basic/web/mods/webplayers/dvplayer/images/img.png") no-repeat;}
+*[data-resource='evplayer']{background:url("/basic/web/mods/webplayers/evplayer/images/img.png") no-repeat;}
+*[data-resource='fvplayer']{background:url("/basic/web/mods/webplayers/fvplayer/images/img.png") no-repeat;}
+*[data-resource='gvplayer']{background:url("/basic/web/mods/webplayers/gvplayer/images/img.png") no-repeat;}
+*[data-resource='hvplayer']{background:url("/basic/web/mods/webplayers/hvplayer/images/img.png") no-repeat;}
+*[data-resource='ivplayer']{background:url("/basic/web/mods/webplayers/ivplayer/images/img.png") no-repeat;}
+*[data-resource='jvplayer']{background:url("/basic/web/mods/webplayers/jvplayer/images/img.png") no-repeat;}
+*[data-resource='kvplayer']{background:url("/basic/web/mods/webplayers/kvplayer/images/img.png") no-repeat;}
+*[data-resource='lvplayer']{background:url("/basic/web/mods/webplayers/lvplayer/images/img.png") no-repeat;}
+*[data-resource='mvplayer']{background:url("/basic/web/mods/webplayers/mvplayer/images/img.png") no-repeat;}
+*[data-resource='nvplayer']{background:url("/basic/web/mods/webplayers/nvplayer/images/img.png") no-repeat;}
+*[data-resource='ovplayer']{background:url("/basic/web/mods/webplayers/ovplayer/images/img.png") no-repeat;}
+*[data-resource='pvplayer']{background:url("/basic/web/mods/webplayers/pvplayer/images/img.png") no-repeat;}
+*[data-resource='qvplayer']{background:url("/basic/web/mods/webplayers/qvplayer/images/img.png") no-repeat;}
+*[data-resource='rvplayer']{background:url("/basic/web/mods/webplayers/rvplayer/images/img.png") no-repeat;}
+*[data-resource='svplayer']{background:url("/basic/web/mods/webplayers/svplayer/images/img.png") no-repeat;}
+*[data-resource='tvplayer']{background:url("/basic/web/mods/webplayers/tvplayer/images/img.png") no-repeat;}
+*[data-resource='uvplayer']{background:url("/basic/web/mods/webplayers/uvplayer/images/img.png") no-repeat;}
+*[data-resource='vvplayer']{background:url("/basic/web/mods/webplayers/vvplayer/images/img.png") no-repeat;}
+*[data-resource='wvplayer']{background:url("/basic/web/mods/webplayers/wvplayer/images/img.png") no-repeat;}
+*[data-resource='xvplayer']{background:url("/basic/web/mods/webplayers/xvplayer/images/img.png") no-repeat;}
+*[data-resource='yvplayer']{background:url("/basic/web/mods/webplayers/yvplayer/images/img.png") no-repeat;}
+*[data-resource='zvplayer']{background:url("/basic/web/mods/webplayers/zvplayer/images/img.png") no-repeat;}

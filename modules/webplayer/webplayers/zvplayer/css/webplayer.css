@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+#webplayer{background-position: 108% -6%;background-size: 117%;}
+
+#wp-controls{top: 67%;right: 19%;width: 2%;height: 28%;}
+
+#wp-controls .wp-button {background-size: 1000%;width: 50px;height: 27px;right: 11%;border: 3px solid #444444;border-radius: 5px;}	
+
+#play{background-position:1% 0%;top: 70%;}
+
+#pause{background-position:1% 15%;top: 70%;}
+
+#next{background-position:1% 0%;top:38%;}
+
+#prev{background-position:1% 0%;top:4%;}
+
+#prev:active{background-position:1% 15%;}
+
+#next:active{background-position:1% 15%;}
+
+#play[data-status='active']{background-position:1% 15%;}
+
+#pause[data-status='active']{background-position:1% 0%;}
+
+#wp-volume-control{width: 15%;height: 3%;top: 61.5%;left: 75%;background:#8a0d0d;border: solid 1px #000000;}
+
+#Actuador-Volumen{background:#00d4e4;border: solid 1px #000000;}
+/********************************** SELECTOR ESTILOS ******************************************/
+#albums-next-control, #albums-prev-control, #channels-next-control, #channels-prev-control{background: none;}
+
+.channel{background:#005078 !important;}
+
+#channels-list{border: solid 1px #777777;}
+
+#channels-next-control{border-left: 29px solid #005078;border-top: 16px solid transparent;border-bottom: 14px solid transparent;}
+
+#channels-prev-control{border-right: 29px solid  #005078;border-top: 16px solid transparent;border-bottom: 14px solid transparent;}
+
+#albums-prev-control{border-right: 36px solid #4949c6;border-top: 31px solid transparent;border-bottom: 31px solid transparent;}
+
+#albums-next-control{border-left: 36px solid #4949c6;border-top: 31px solid transparent;border-bottom: 31px solid transparent;}

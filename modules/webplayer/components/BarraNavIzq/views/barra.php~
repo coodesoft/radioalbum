@@ -1,0 +1,11 @@
+<div id='Cont-barra-izq'>
+	<div id='novedades' class='boton'>
+		<div id='cuadrado'>
+			<div class='linea'></div>
+			<div class='linea'></div>
+			<div class='linea'></div>
+		</div>
+	</div>
+	<div id='info' class="CuadroInfo" data-op='0' data-mostrado=''>
+	</div>
+</div>

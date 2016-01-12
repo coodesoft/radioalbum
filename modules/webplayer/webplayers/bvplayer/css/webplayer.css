@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+
+#webplayer{background-position: 100% -37%;background-size: 107%;}
+
+#wp-controls{top: 269px;left: 22%;width: 27%;height: 8%;}
+
+#wp-controls .wp-button{height: 33px; width: 33px;background-size: 1500%;position: relative;
+	border-radius: 50%;display: inline-block; border: 3px solid #444444;}	
+
+#play{background-position: 0% 10%;right: -12%;}
+
+#pause{background-position: 0% 21%;right: 12%;}
+
+#prev{background-position: -0.5% 31.4%;left: -9px;}
+
+#next{background-position: -0.5% 42%;}
+
+#prev:active{background-position: -0.5% 52.4%;}
+
+#next:active{background-position: -0.5% 63.4%;}
+
+#play[data-status='active']{background-position: 0% 21%;}
+
+#pause[data-status='active']{background-position: 0% 10%;}
+
+#wp-volume-control{top: 269px;right: 17.8%;width: 32px;height: 32px;border-radius: 50%;}
+
+#Actuador-Volumen{background-position: -0.5% -0.5%;background-size: 1500%;}
+/********************************** SELECTOR ESTILOS ******************************************/
+#channels-next-control, #channels-prev-control, #albums-next-control, #albums-prev-control{background: none !important;}
+
+.channel{background:rgb(77, 144, 66) !important;border: solid 2px #666666;}
+
+#channels-next-control{border-left: 20px solid rgb(200, 200, 200);border-top: 10px solid transparent;border-bottom: 10px solid transparent;}
+
+#channels-prev-control{border-right: 20px solid rgb(200, 200, 200);border-top: 10px solid transparent;border-bottom: 10px solid transparent;}
+
+#albums-prev-control{border-right: 36px solid rgb(168, 129, 83);border-top: 31px solid transparent;border-bottom: 31px solid transparent;}
+
+#albums-next-control{border-left: 36px solid rgb(168, 129, 83);border-top: 31px solid transparent;border-bottom: 31px solid transparent;}
+
+#channels-info-container{border: solid 1px #000000;background-color: black !important;}
+
+#channels-list{border:1px solid #445522;}
+/**** extras **/
+#wp-controls .wp-button:hover{border-color:#dddddd;}
+#channels-info-container,#channels-selected-info,#channels-hover-info{border-radius:10px;}

@@ -1,0 +1,38 @@
+<?php
+
+return [
+            'enablePrettyUrl' => true,
+            'showScriptName' => true,
+            'enableStrictParsing' => false,
+            'rules' => [
+                'welcome'   => 'site/index',
+                'admin' => 'site/login',
+				[
+					'pattern' => 'novedades/<h>/<p>',
+					'route' => 'PagEdit/main/present',
+					'defaults' => ['h'=>'1','p'=>'5'],				
+				],
+          	[
+            		'pattern' => 'estatica/<i>', // agregado para ir a alguna pagina estatica
+            		'route' => 'PagEdit/main/ver', 
+            	],
+                'editor-paginas' => 'PagEdit/main/inicio', //agregado
+				'estatica' => 'PagEdit/main/ver',//agregado
+				'edit-estatica' => 'PagEdit/main/editar', //agregado
+				'guardar-estatica' => 'PagEdit/main/guardar', //agregado
+                'webplayer' => 'webplayer/wp/index',
+                'tageditor' => 'mp3editor/music-editor/index',
+                'tageditor/<action:(navigate|set-tags|get-tags)>' => 'mp3editor/music-editor/<action>',
+                [
+                    'pattern' => 'webplayer/<action:(connection-params|obtener-lista|social|index)>/<i:\w{1}>/<c:\d+>/<a:\d+>',
+                    'route' => 'webplayer/wp/<action>',
+                    'defaults' => ['i' => '', 'c'=> '', 'a'=>''],
+                    
+                ],
+                [
+					'pattern' => 'suscriptor/<action:(suscribe|confirmation)>/<i:\d+>/<c:\w+>',
+					'route' =>  'suscriptor/default/<action>',
+					'defaults' => ['i'=>'', 'c'=>''],
+				],
+            ],
+         ];

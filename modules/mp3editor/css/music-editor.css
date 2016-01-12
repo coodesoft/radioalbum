@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+.bordeable{
+	border: 1px solid red;
+}
+
+.data-container{
+	height: 470px;
+	background: #101010;
+}
+
+#mediaContent{
+	height: 300px;
+	overflow: auto;
+}
+
+#musicList .row,
+#musicEditForm .row{
+	margin: 10px 5px;
+}
+
+#mediaContent ul{
+	margin-left: -40px;
+}
+#mediaContent li{
+	list-style-type : none;
+	list-style-position: inside;
+	cursor: pointer;
+	font-size: 15px;
+	padding-left: 15px;
+}
+#mediaContent li[data-type="directory"]{
+	font-weight: bold;
+}
+
+#mediaContent li:hover{
+	text-decoration: underline;
+	color: #006213;
+}
+
+#mediaContent li:nth-child(odd) {
+    background: #C6FFCC;
+}
+
+#mediaContent li:nth-child(even) {
+    background: #9BCDA0;
+}
+
+#mediaContent li.active{
+	font-weight: bold;
+}
+
+#fileNameTitle{
+	margin-bottom: 10px;
+	font-size: 15px;
+	padding: 5px;
+	background: black;
+	color: green;
+	
+}
+

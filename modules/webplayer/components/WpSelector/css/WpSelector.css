@@ -1,0 +1,31 @@
+@media handheld{.flecha {display:block!important;}}
+
+.flecha{position:absolute;display:none;}
+
+#flecha-ant{
+	top: 42%;
+	left:-4%;
+	border-right: 29px solid #c69c49;border-top: 16px solid transparent;border-bottom: 14px solid transparent;}
+#flecha-sig{
+	top: 42%;left: 102%;
+	border-left: 29px solid #c69c49;border-top: 16px solid transparent;border-bottom: 14px solid transparent;}
+
+#wp-selector-display{height:70px;overflow: hidden;
+	border: 3px solid #dddddd;box-shadow: 7px 5px 6px #555555;
+	margin-top: 10px;background-image:linear-gradient(to top, rgb(150, 150, 150) 0%, rgb(100, 100, 100) 60%, rgb(50, 50, 50) 100%);
+	border-radius: 75%;
+}
+
+#wp-selector{position: relative;width: 130%;height:100%;overflow: hidden;margin-left: -5%;}
+
+#wp-selector .bullet{background: url(/basic/modules/webplayer/components/WpSelector/img/lista-radios.png) no-repeat;
+	width:89px;height:60px;margin: 5px auto;margin-left: 8px;background-size: 3000%;
+	cursor: pointer;display: inline-block;border-radius:100%;border:1px solid #444444;}
+
+#wp-selector [data-status='active']{opacity:1;border:1px solid white;}
+
+#wp-selector [data-status='inactive']{opacity:0.5;}
+
+#wp-selector .bullet:hover{border-radius:100%}
+
+.precarga{width:700px;height:400px;position:absolute;top:-1000%;}

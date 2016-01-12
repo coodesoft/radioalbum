@@ -1,0 +1,42 @@
+const Anim_t_mueve = 1500;
+
+const CantMover=50; // especifica cuanto se mueve en porcentaje
+
+var MargenPrimero=0;
+
+$(document).ready(function(){
+	// se apreta el boton cerrar
+	$('#cerrar-novedades').click(function(){
+		$('#Cont-barra-izq').animate({opacity:'0'},function(){
+			$('#Cont-barra-izq').css('display','none');
+		});
+	});
+		
+	InicializaCss(); // se establecen los estilos css de los titulos de las novedades
+	
+	$('.botonMoverNav').click(function(){
+		if ($(this).attr('id')=='barra-sig'){
+			if (MargenPrimero > -200) {
+				AnimarPrev(-CantMover);
+			} 
+		} else {
+			if (MargenPrimero < 0) {
+				AnimarPrev(CantMover);
+			} 
+		}
+	});
+	
+});
+
+function InicializaCss(){
+	$('.spoiler').css('width','49%');
+	$('.spoiler').css('margin','0%');
+	$('.spoiler:first').css('margin-left','1%');
+	$('.spoiler').css('margin-right','1%');
+	$('.PrevVisualArti').css('margin','1px');	
+}
+
+function AnimarPrev(Mover){
+	MargenPrimero += Mover;
+	$('.spoiler:first').animate({marginLeft:MargenPrimero+1+'%'},Anim_t_mueve);
+}

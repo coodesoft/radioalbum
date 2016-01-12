@@ -1,0 +1,83 @@
+#Cont-barra-izq{z-index: 1000;
+border: 2px solid #333333;
+background-color: #99bb99;
+height: 54px;
+border-radius: 7px;
+padding: 5px;
+background-image: linear-gradient(to top, #4e9a06 0%,#8ae234 50%, #4e9a06 100%);}
+
+#tex-tit{text-align:center; font-size:15pt; margin-top:5px;}
+
+.boton-cerrar{cursor: pointer;
+position: absolute;
+top: 4%;
+width: 20px;
+background: #444444;
+text-align: center;
+border-radius: 3px;
+border: 1px solid #555555;
+color: #bbbbbb;
+font-weight: bold;
+left: 1px;}
+
+.boton-cerrar:hover{background:#888888;}
+
+#barra-spoiler{
+position: absolute;
+width: 90%;
+left: 6%;
+top: 4%;
+border: 1px solid #555555;
+background-image: linear-gradient(to top, #4e9a06 0%,#8ae234 50%, #4e9a06 100%);
+padding-top: 1px;
+padding-left: 15px;
+padding-bottom: 5px;
+overflow: hidden;
+height: 45px;}
+
+#contenedor-slider-nov{width: 200%;
+overflow: hidden;
+margin-left: -3%;
+height: 47px;}
+
+.botonMoverNav{width: 0px;
+height: 0px;
+position: absolute;
+cursor: pointer;
+top: 21%;}
+
+#barra-ant{
+left: 3%;
+border-right: 16px solid #404D34;
+border-top: 16px solid transparent;
+border-bottom: 14px solid transparent;}
+#barra-sig{
+left: 96.5%;
+border-left: 16px solid #404D34;
+border-top: 16px solid transparent;
+border-bottom: 14px solid transparent;}
+
+/* Estilos personalizados de l html view*/
+.spoiler{
+	display:inline-block !important;
+}	
+
+.PrevVisualArti{
+	font-size:12pt !important;
+	font-weight:bold  !important;
+	height:39px  !important;
+		
+}
+
+.contFecha{
+	top:26px !important;
+	right:12% !important;
+	color:#ffffff;
+	font-size:8pt;
+}
+	
+.botAmpliarNot{
+	top:6px !important;
+	height:31px !important;
+	right:12px !important;	
+}

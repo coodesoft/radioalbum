@@ -58,9 +58,12 @@ class ConsoleController extends Controller {
     		$dateToCompare->modify('first day of this month');
     		$novedades = Novedades::find()->where(['>=', 'fecha',  $dateToCompare->format('Y-m-d')])->all();
     			
-    		$msg = $this->buildNewsBodyContent($novedades, 'mensuales');
-    		foreach ($suscriptores as $suscriptor)
-    			$this->sendMail($suscriptor->mail, 'Novedades de Radioalbum', $msg);
+    		//si hay novedades para enviar
+    		if (count($novedades)>0){
+	    		$msg = $this->buildNewsBodyContent($novedades, 'mensuales');
+	    		foreach ($suscriptores as $suscriptor)
+	    			$this->sendMail($suscriptor->mail, 'Novedades de Radioalbum', $msg);
+    		}
     	}
     
     	/*
@@ -81,9 +84,12 @@ class ConsoleController extends Controller {
     		//buscamos las novedades con fecha mayor a la de comparación
     		$novedades = Novedades::find()->where(['>', 'fecha',  $dateToCompare->format('Y-m-d')])->all();
     
-    		$msg = $this->buildNewsBodyContent($novedades, 'semanales');
-    		foreach ($suscriptores as $suscriptor)
-    			$this->sendMail($suscriptor->mail, 'Novedades de Radioalbum', $msg);
+    		//si hay novedades para enviar
+    		if (count($novedades)>0){
+	    		$msg = $this->buildNewsBodyContent($novedades, 'semanales');
+	    		foreach ($suscriptores as $suscriptor)
+	    			$this->sendMail($suscriptor->mail, 'Novedades de Radioalbum', $msg);
+    		}
     	}
     }
 

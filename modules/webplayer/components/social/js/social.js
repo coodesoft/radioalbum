@@ -1,4 +1,4 @@
-const RutaWeb = '/basic/web/index.php/webplayer/social';
+const RutaWeb = 'basic/web/index.php/webplayer/social';
 const TamFin = '600%';
 
 $('body').on('click','.opcion', function() { 
@@ -13,7 +13,7 @@ $('body').on('click','.opcion', function() {
 		window.open(PrefijoSocial(IdBoton)+encodeURIComponent(ArmarUrl()),'_blank');
 	}
 	
-})
+});
 
 $('body').on('click','#cerrar', function() { 
 	EscondeVisor();
@@ -30,6 +30,9 @@ function PrefijoSocial(id){
 function ArmarUrl(){
 	var Skin = $('#webplayer').attr('data-resource')[0];
 	var channelID = $('#wp-player').attr('data-channel');
+	if (channelID == undefined){
+		channelID = $('#parametros').attr('data-channel');
+	}
 	var AlbumId = $('#wp-player').attr('data-album');
 	var pref = '&';
 	var dir = ((location.href.split('/'))[0])+'//'+((location.href.split('/'))[2]) + "/";

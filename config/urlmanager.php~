@@ -8,25 +8,25 @@ return [
                 'welcome'   => 'site/index',
                 'admin' => 'site/login',
 				[
-					'pattern' => 'novedades/<h>/<p>',
+					'pattern' => 'novedades/<h>/<p>/<r>',
 					'route' => 'PagEdit/main/present',
-					'defaults' => ['h'=>'1','p'=>'5'],				
+					'defaults' => ['h'=>'1','p'=>'5','r'=>''],		
 				],
-          	[
+          		[
             		'pattern' => 'estatica/<i>', // agregado para ir a alguna pagina estatica
             		'route' => 'PagEdit/main/ver', 
             	],
-                'editor-paginas' => 'PagEdit/main/inicio', //agregado
-				'estatica' => 'PagEdit/main/ver',//agregado
-				'edit-estatica' => 'PagEdit/main/editar', //agregado
-				'guardar-estatica' => 'PagEdit/main/guardar', //agregado
+                'editor-paginas' => 'PagEdit/main/inicio', 
+				'edit-estatica' => 'PagEdit/main/editar', 
+				'guardar-estatica' => 'PagEdit/main/guardar', 
                 'webplayer' => 'webplayer/wp/index',
                 'tageditor' => 'mp3editor/music-editor/index',
+                'imagenalbum' => 'webplayer/imagenalbum', //agregado
                 'tageditor/<action:(navigate|set-tags|get-tags)>' => 'mp3editor/music-editor/<action>',
                 [
-                    'pattern' => 'webplayer/<action:(connection-params|obtener-lista|social|index)>/<i:\w{1}>/<c:\d+>/<a:\d+>',
+                    'pattern' => 'webplayer/<action:(connection-params|obtener-lista|social|social2|index)>/<i:\w{1}>/<c:\d+>/<a:\d+>/<x>',
                     'route' => 'webplayer/wp/<action>',
-                    'defaults' => ['i' => '', 'c'=> '', 'a'=>''],
+                    'defaults' => ['i' => '', 'c'=> '', 'a'=>'', 'x' => 'http://www.radioalbum.com.ar/basic/web/images/logora.png'],
                     
                 ],
                 [

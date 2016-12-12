@@ -17,10 +17,18 @@
 	$this->title = 'Radio Album';
 	$this->params['breadcrumbs'][] = $this->title;
 
+	$this->registerMetaTag(['property' => 'og:site_name', 'content' => 'Radio Album']);
+
 	//meta  tags para el feibuk
 	$this->registerMetaTag(['property' => 'og:title', 'content' => 'Radio Album']);
 	$this->registerMetaTag(['name' => 'og:description', 'content' => $descripcion]);
 	$this->registerMetaTag(['property' => 'og:image', 'content' => $urlimg]);
+	
+	//meta tag para el twiter
+	$this->registerMetaTag(['name' => 'twitter:card', 'content' => 'summary']);
+	$this->registerMetaTag(['name' => 'twitter:title', 'content' => 'Radio Album']);
+	$this->registerMetaTag(['name' => 'twitter:description', 'content' => $descripcion]);
+	$this->registerMetaTag(['name' => 'twitter:image', 'content' => $urlimg]);
 
 ?>
 <div id="choclo"></div>

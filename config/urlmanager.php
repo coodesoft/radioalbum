@@ -16,14 +16,20 @@ return [
             		'pattern' => 'estatica/<i>', // agregado para ir a alguna pagina estatica
             		'route' => 'PagEdit/main/ver', 
             	],
-                'editor-paginas' => 'PagEdit/main/inicio', //agregado
-				'edit-estatica' => 'PagEdit/main/editar', //agregado
-				'guardar-estatica' => 'PagEdit/main/guardar', //agregado
+            	[
+					'pattern' => 'imagenalbum/<a>',
+					'route' => 'webplayer/wp/imagenalbum',
+							
+					],
+                'editor-paginas' => 'PagEdit/main/inicio', 
+				'edit-estatica' => 'PagEdit/main/editar', 
+				'guardar-estatica' => 'PagEdit/main/guardar', 
                 'webplayer' => 'webplayer/wp/index',
                 'tageditor' => 'mp3editor/music-editor/index',
+                
                 'tageditor/<action:(navigate|set-tags|get-tags)>' => 'mp3editor/music-editor/<action>',
                 [
-                    'pattern' => 'webplayer/<action:(connection-params|obtener-lista|social|index)>/<i:\w{1}>/<c:\d+>/<a:\d+>/<x>',
+                    'pattern' => 'webplayer/<action:(connection-params|obtener-lista|social|social2|index)>/<i:\w{1}>/<c:\d+>/<a:\d+>/<x>',
                     'route' => 'webplayer/wp/<action>',
                     'defaults' => ['i' => '', 'c'=> '', 'a'=>'', 'x' => 'http://www.radioalbum.com.ar/basic/web/images/logora.png'],
                     

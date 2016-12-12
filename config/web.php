@@ -53,6 +53,7 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'dbampache' => require(__DIR__ . '/dbampache.php'),
     ],
     'params' => $params,
 ];

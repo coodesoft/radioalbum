@@ -6,6 +6,10 @@ use yii\helpers\BaseJson;
 use Yii;
 use app\controllers\RadioAlbumController;
 
+//cargamos el modelo de obtención e imágenes de albunes
+use app\modules\webplayer\models\imagenalbum;
+use app\modules\webplayer\models\AmpacheAlbum;
+
 class WpController extends RadioAlbumController{
         
     public function actionConnectionParams(){
@@ -52,35 +56,32 @@ class WpController extends RadioAlbumController{
     public function actionIndex(){
         return $this->render('index',['urlimg' => 'http://www.radioalbum.com.ar/basic/web/images/logoar.png', 'descripcion'=>'Radio Album']);
     }
+		
+	 public function actionImagenalbum($a){
 
-    public function actionSocial(){
-	 $req = Yii::$app->request;
-    		$i = $req->get('i');
-    		$c = $req->get('c');
-    		$a = $req->get('a');
-        //se inicia sesion en el ampache
-        $Conexion = BaseJson::decode($this->actionConnectionParams());
-        $datos="";
-        $peticionAmpache = http_post_data($Conexion["url"].'action='.$Conexion['action']."&auth=".$Conexion['auth']."&timestamp=".$Conexion['timestamp']."&version=".$Conexion['version']."&user=".$Conexion['user'],$datos,array("timeout"=>1,"useragent"=>""));
-		  $peticionAmpache = substr($peticionAmpache, strpos ($peticionAmpache,'<')); 
-		  $peticionAmpache = substr($peticionAmpache, 0,-5);
-//return $peticionAmpache;		  
-$xml = simplexml_load_string($peticionAmpache);
-		  $token = $xml->auth;
-		  //se pide la informacion del album
-		  $peticionAmpache = http_post_data($Conexion["url"]."auth=".$token."&action=album_songs&filter=".$a,$datos);
-        //return $peticionAmpache;
-	$peticionAmpache =substr(substr($peticionAmpache,strpos ($peticionAmpache,'<')),0,-5);
-        
-        $xml = simplexml_load_string($peticionAmpache);
-		  
-			//"renderizamos la vista"
-        $salida = $this->render('index',['urlimg' => $xml->song[0]->art, 'descripcion' => 'Escuchando '.$xml->song[0]->album.' en Radio Album!']);
+	 		$Modelo = new imagenalbum(['album'=>$a]);
+			$Imagen = $Modelo->Imagen();
+			return $Imagen;
+	 }	
+	
+	 public function actionSocial(){
+	 		//cargamos los parametros
+	 		$req = Yii::$app->request;
+    		$i = $req->get('i');//skin
+    		$c = $req->get('c');//canal
+    		$a = $req->get('a');//album
+    		$ModeloAlbum = new AmpacheAlbum;
+	 		$NombreAlbum = $ModeloAlbum::find()->where(['id' => $a])->one();
+	 		$NombreAlbum = $NombreAlbum->name;
+	 		$Imagen = "http://www.radioalbum.com.ar/basic/web/index.php/imagenalbum/".$a;
+	 		//"renderizamos la vista"
+        $salida = $this->render('index',['urlimg' => $Imagen, 'descripcion' => 'Escuchando '.$NombreAlbum.' en Radio Album!']);
         //le agregamos los parametros necesarios
-        $salida .= '<div id="parametros" data-skin="'.$i.'vplayer" data-album="'.$a.'" data-channel="'.$c.'"></div>'.$peticionAmpache;
+        $salida .= '<div id="parametros" data-skin="'.$i.'vplayer" data-album="'.$a.'" data-channel="'.$c.'"></div>';
         //mostramos la vista
         return $salida;
-    }
+	 }
+
 }
 
 ?>

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.7deb7
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-01-2016 a las 13:04:05
--- Versión del servidor: 5.5.38
--- Versión de PHP: 5.4.41-1~dotdeb+6.1
+-- Tiempo de generación: 26-02-2015 a las 17:37:45
+-- Versión del servidor: 5.5.41-0ubuntu0.14.04.1
+-- Versión de PHP: 5.5.9-1ubuntu4.6
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -34,11 +35,11 @@ CREATE TABLE IF NOT EXISTS `estaticas` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Volcar la base de datos para la tabla `estaticas`
+-- Volcado de datos para la tabla `estaticas`
 --
 
 INSERT INTO `estaticas` (`id`, `titulo`, `cuerpo`, `opciones`) VALUES
-(1, 'Nosotros', '<p><br></p><p><br></p><p><br></p><strong></strong><p>RadioAlbum&nbsp;&nbsp;&nbsp; Hacela tuya</p><p><br></p><p>Conectate a las colecciones de discos completos en</p><p><br></p><p><a data-cke-saved-href="http://www.radioalbum.com.ar/" href="http://www.radioalbum.com.ar/">www.radioalbum.com.ar</a></p><p><br></p><p>Explorando y recorriendo los canales día a día renovados</p><p><br></p><p>RadioAlbum un universo musical en expansión!!!</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>', 'ninguna en particular');
+(1, 'Nosotros', '<p><br></p><p><br></p><p><br></p><p><strong>Desde RadioAlbum </strong>podrás enviar un mensaje musicalizado a tus amistades recomendando canciones y bandas.&nbsp;</p><div><p>Los canales de RadioAlbuhm están dedicados a un amplio, libre y novedoso espectro de tendencias pop, rock e indie.&nbsp;</p><p>Además de las compilaciones encontrarás un canal dedi<span style="font-family:verdana,geneva,sans-serif">cado a un a</span>lbum o un artista.</p><p>RadioAlbum además colaborará ayudando a difundir la obra de artistas independientes a través de nuestra página, consultá en: ####&nbsp;</p><p>También estamos desarrollando una tienda ecléctica donde podrás encontrar accesorios de computación y audio y expresiones artistícas en diversos formatos.</p><p>Esperamos que disfrutes participando de <em>RadioAlbum.</em></p></div><div><h3><br></h3></div><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>', 'ninguna en particular');
 
 -- --------------------------------------------------------
 
@@ -52,65 +53,36 @@ CREATE TABLE IF NOT EXISTS `novedades` (
   `cuerpo` text,
   `fecha` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=106 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
 
 --
--- Volcar la base de datos para la tabla `novedades`
+-- Volcado de datos para la tabla `novedades`
 --
 
 INSERT INTO `novedades` (`id`, `titulo`, `cuerpo`, `fecha`) VALUES
-(54, 'Nuevos discos', '<p>GOGOL BORDELLO balc&aacute;nicos y rockeros en el canal ROCK</p>\r\n', '2015-03-20'),
-(55, 'JAZZ ', '<p>Lee Morgan The cooker sonando&nbsp;</p>\r\n', '2015-03-20'),
-(56, 'Radio Fantasma', '<p>El canal para el indie en espa&ntilde;ol de Radio Album&nbsp;</p>\r\n', '2015-03-20'),
-(57, 'Los elegidos de Patti Smith', '<p>Doce canciones en la versi&oacute;n de Patti Smith, de Hendrix a Nirvana. En el canal Rock de la radio</p>\r\n', '2015-03-24'),
-(58, 'Nacional e independiente', '<p>Bandas argentinas de producci&oacute;n independiente sonando en Radio Fantasma.&nbsp;</p>\r\n', '2015-03-24'),
-(59, 'Canal NOVEDADES', '<p>Escuch&aacute; en el canal novedades una selecci&oacute;n de los discos m&aacute;s recientes del cat&aacute;logo&nbsp;</p>\r\n', '2015-04-08'),
-(60, 'Reggae Dub', '<p>Explor&aacute; el canal Reggae de Radioalbum y disfrut&aacute; de la mejor selecci&oacute;n de discos</p>\r\n', '2015-04-09'),
-(61, 'Jazz', '<p>Desde Billie Holiday a Ornette Coleman, grandes discos del jazz de todos los tiempos en Radioalbum</p>\r\n', '2015-04-09'),
-(62, 'Daniel Johnston', '<p>Un compilado para conocer el&nbsp;enigmatico mundo de Daniel Johnston y sus canciones de cassette</p>\r\n\r\n<p>En el canal INDIE de RadioAlbum</p>\r\n', '2015-04-10'),
-(63, 'Explosión de garaje salvaje', '<p>Los Peyotes, banda salvaje por esencia suena en Radio Fantasma, nuestro canal para las bandas independientes&nbsp;</p>\r\n', '2015-04-13'),
-(64, 'Radio Fantasma', '<p>Es nuestro canal para las banda independientes que cantan en espa&ntilde;ol.</p>\r\n\r\n<p>Bandas de Argentina Espa&ntilde;a y otros rincones de ibaroam&eacute;rica&nbsp;</p>\r\n\r\n<p>Encontrala en RadioAlbum</p>\r\n', '2015-04-13'),
-(65, 'Canal Rock', '<p>Nuevos discos se suman todos los d&iacute;as en nuestro canal Rock</p>\r\n\r\n<p>Hoy Fugazi, Beck, Eddie Vedder y m&aacute;s</p>\r\n', '2015-04-14'),
-(66, 'Indie indie', '<p>Nuevos discos en el canal Indie de RadioAlbum hoy se suman The Futureheads, Ride y m&aacute;s</p>\r\n\r\n<p>Descubrilos con el selector de canales</p>\r\n', '2015-04-15'),
-(67, 'Desde España', '<p>En el canal&nbsp;Radio Fantasma podes encontrar discos de&nbsp;bandas independientes espa&ntilde;olas&nbsp;</p>\r\n\r\n<p>Descubrilos en RadioAlbum</p>\r\n', '2015-04-16'),
-(68, 'MIngus', '<p>Trep&aacute; al Mingus Tree en el canal Jazz de</p>\r\n\r\n<p>RadioAlbum</p>\r\n', '2015-04-16'),
-(69, 'REGGAE', '<p>En nuestro canal Reggae podes escuchar los mejores discos.. Explorala en RadioAlbum</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2015-04-20'),
-(70, 'Punk rock en RadioAlbum', '<p>En el canal Rock podes escuchar The Clash Joy Division The Stranglers y mucho m&aacute;s.</p>\r\n', '2015-04-21'),
-(71, 'Nuevos discos todos los días!!!', '<p>Nuevos discos en el canal Indie y lo mejor del indie en espa&ntilde;ol en el canal Radio Fantasma</p>\r\n\r\n<p>Descubrilos en RadioAlbum</p>\r\n\r\n<p>HACELA TUYA!!!!</p>\r\n', '2015-04-23'),
-(72, 'Rock + Punk + Alternativo', '<p>En el canal Rock de RadioAlbum podes escuchar discos de Pixies, Johnny Thunders, Joe Strummer y muchos m&aacute;s..</p>\r\n\r\n<p>Descubrilos en RadioAlbum</p>\r\n', '2015-04-27'),
-(73, 'Canal INDIE', '<p>En el canal Indie podes escuchar The Vaselines, The Coral, Wavves y muchos discos m&aacute;s</p>\r\n\r\n<p>DESCUBRILOS EN RadioAlbum!!!!!</p>\r\n', '2015-04-28'),
-(74, 'Bowie and Pixies', '<p>En el canal Rock de RadioAlbum podes escuchar Heathen de David Bowie, el disco en el que toca un cover de Pixies.</p>\r\n\r\n<p>Descubrilo en RadioAlbum</p>\r\n', '2015-04-30'),
-(75, 'Siempre creciendo ', '<h2>Todos los d&iacute;as nuevos discos...hoy en el canal Rock: Patti Smith, New York Dolls, Pavement y mucho m&aacute;s.</h2>\r\n\r\n<h2>DESCUBRILOS EN RadioAlbum!!!!!</h2>\r\n', '2015-05-04'),
-(76, 'Indie en RadioAlbum', '<h2>En la radio podes encontrar una selecci&oacute;n de discos completos renovados todos los d&iacute;as.</h2>\r\n\r\n<h1>RadioAlbum &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Hacela Tuya!!!</h1>\r\n', '2015-05-06'),
-(77, 'Clásicos en RadioAlbum', '<p>En nuestros canales podes escuchar Talking Heads (77), Meat Puppets (Too high to die), y mucho m&aacute;s..</p>\r\n\r\n<p>Descubrilos en el canal Rock de RadioAlbum</p>\r\n\r\n<p>HACELA TUYA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>\r\n', '2015-05-11'),
-(78, 'Nina Simone', '<p>En el canal Jazz podes escuchar a Nina Simone, Fela Kuti, Charles Mingus y mucho m&aacute;s</p>\r\n\r\n<p>RadioAlbum Hacela Tuya!!!!!!</p>\r\n', '2015-05-12'),
-(79, 'Nuevos en el canal Rock', '<p>Encontr&aacute; a The Jam, Patti Smith. The Hives y mucho m&aacute;s en RadioAlbum</p>\r\n', '2015-05-16'),
-(80, 'Reggae celta', '<p>Escuch&aacute; en el canal Reggae de RadioAlbum el disco completo de The Trojans y su Ska con gaitas</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2015-05-20'),
-(81, 'Sonidos independientes', '<h1>Nuevos discos de bandas independientes argentinas suenan en RadioAlbum</h1>\r\n\r\n<h1>HacelaTuya!!!&nbsp;</h1>\r\n', '2015-05-21'),
-(82, 'Canal Indie en RadioAlbum', '<p>En el canal indie se suman discos todos los dias, hoy King Khan, Citizen y Vetiver</p>\r\n\r\n<p>Descubrilos en RadioAlbum</p>\r\n', '2015-05-26'),
-(83, 'Canal ROCK de RadioAlbum', '<h1>Jon Spencer Blues Explosion , Dream Syndicate - Morrissey Kula Shaker y otros discos se suman a nuestro canal ROCK hoy</h1>\r\n\r\n<p>&nbsp;</p>\r\n', '2015-05-27'),
-(84, 'Nuevos nuevos', '<h2>Nuevos discos en RadioAlbum This is The Sonics y Sonics Highways de Foo Fighters&nbsp;</h2>\r\n', '2015-06-01'),
-(85, 'Dub sideral', '<h2>U-Roy y King Tubby en nuestro canal REGGAE&nbsp;</h2>\r\n\r\n<h1>Disfrutalos en RadioAlbum!!!</h1>\r\n', '2015-06-05'),
-(86, 'Más indie en RadioAlbum', '<h1>Veronica Falls - The Dodos - Thee Oh Sees y mucho m&aacute;s en el gran canal INDIE de RadioAlbum</h1>\r\n\r\n<h1>HACELA TUYA!!!!</h1>\r\n', '2015-06-08'),
-(87, 'Recién salidos ', '<h1>Noel Gallagher y Paul Weller suenan en el canal ROCK de</h1>\r\n\r\n<h1>RadioAlbum</h1>\r\n\r\n<p>&nbsp;</p>\r\n', '2015-06-09'),
-(88, 'Siempre nuevos discos', '<h1>Yo La Tengo - Stiv Bators - Teenage Fanclub y m&aacute;s discos se sumaron a</h1>\r\n\r\n<h1>RadioAlbum</h1>\r\n', '2015-06-15'),
-(89, 'Dr Feelgood y el Jetty', '<h1>Dr Feelgood y su primer disco Down by the jetty suena en RadioAlbum</h1>\r\n\r\n<h2>Encontralo en el canal Rock y en Novedades</h2>\r\n', '2015-06-18'),
-(90, 'Todos los días nuevos discos', '<h1>Strokes , Radio Birdman, Byron Lee y mucho m&aacute;s en los variados canales de RadioAlbum</h1>\r\n', '2015-06-19'),
-(91, ' Nuevos discos en el canal ROCK', '<h1>The Animals - Violent Femmes - The Ventures - Los Natas y m&aacute;s se sumaron hoy a las selecciones de RadioAlbum</h1>\r\n', '2015-06-22'),
-(92, 'Bandas independientes en RadioAlbum', '<h1>Bandas argentinas independientes en RadioAlbum</h1>\r\n\r\n<h1>Aguas T&oacute;nicas - Los Nuevos Monstruos - Riel - Kill West y m&aacute;s</h1>\r\n', '2015-06-30'),
-(93, 'Clásicos del jazz', '<h1>Algunos incunables del jazz suenan en RadioAlbum</h1>\r\n\r\n<h1>Mingus Ah Um</h1>\r\n\r\n<h1>Dave Brubeck Time out</h1>\r\n\r\n<h1>y m&aacute;s</h1>\r\n', '2015-07-07'),
-(94, 'Novedades desde España', '<h1>Univers y Novedades Carminha dos bandas de Barcelona que suenan en la radio fantasma de RadioAlbum</h1>\r\n', '2015-07-11'),
-(95, 'Jazz , Rock, reggae y mucho más', '<h1>Descubr&iacute; los canales de RadioAlbum y su diversidad</h1>\r\n', '2015-07-20'),
-(96, 'Nuevos discos y nuevas bandas', '<h1>Nuevas bandas en RadioAlbum</h1>\r\n\r\n<h1>The Duppies - The Bluebeaters - Los Accidentes y m&aacute;s&nbsp;</h1>\r\n', '2015-07-27'),
-(97, 'Joyas argentinas - Discos recuperados', '<h1>- Los Pillos y su sonido Joy Division volviendo desde los ochenta</h1>\r\n\r\n<h1>- Historia del crimen y su rockabilly de alta gama</h1>\r\n\r\n<h1>Todo suena en RadioAlbum</h1>\r\n', '2015-08-03'),
-(98, 'CLÁSICOS ', '<h1>L.A Woman (The Doors) - Closer (Joy Division) - Travel with your mind (The Seeds)</h1>\r\n\r\n<h1>y otros bellos discos en RadioAlbum</h1>\r\n', '2015-08-26'),
-(99, 'SUPER REGGAE DUB', '<h1>EN EL CANAL REGGAE ENCONTR&Aacute; UNA SELECCI&Oacute;N DE DISCOS CL&Aacute;SICOS DE REGGAE SKA Y DUB</h1>\r\n', '2015-09-08'),
-(100, 'DISCOS INDISPENSABLES ', '<h1>ENCONTR&Aacute; EN LAS BATEAS DE RADIOALBUM ESOS DISCOS A LOS QUE SIEMPRE SE VUELVE....</h1>\r\n', '2015-09-14'),
-(101, 'RADIOALBUM HACELA TUYA!!', '<h2>Encontr&aacute; en nuestros canales la selecci&oacute;n de discos para musicalizar tu d&iacute;a.</h2>\r\n', '2015-10-12'),
-(102, 'Siempre creciendo', '<h1>Nuestra selecci&oacute;n de discos crece todos los d&iacute;as, descubrilos navegando nuestros canales.</h1>\r\n', '2015-12-09'),
-(103, 'REGGAE Y DUB EN RADIOALBUM', '<h1>CLIMA IDEAL PARA UNA TARDE DE REGGAE Y UNA NOCHE DE DUB ESPACIAL. DESCUBR&Iacute; LA MAGIA DE LAS MAQUINAS DE KING TUBBY EN NUESTRO CANAL REGGAE</h1>\r\n', '2015-12-16'),
-(104, 'Bandas independientes en RadioAlbum', '<h1>Ok Piramides - Valle de Mu&ntilde;ecas - Los Freneticos - Rayos Laser y otras bandas independientes argentinas suenan en RadioAlbum</h1>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<h1>Hacela Tuya!!</h1>\r\n', '2015-12-21'),
-(105, 'Novedades en Enero', '<h1>Siempre sumando discos a nuestro cat&aacute;logo.</h1>\r\n\r\n<h1>Ramones - End of the century</h1>\r\n\r\n<h1>Luna - Romantica</h1>\r\n\r\n<h1>Soul Syndicate - Dub Classics&nbsp;</h1>\r\n\r\n<h1>Boom Pam - Boom Pam</h1>\r\n\r\n<h1>The Bristol Reggae Explosion 1978-1983</h1>\r\n', '2016-01-05');
+(20, 'fdgdfgdfgdfgd', '<p>jhghjghjghjghjghjgasd ad asd sd</p>\r\n', '2015-02-12'),
+(21, 'fgjjhgfjgfjh', 'gfjgfjgfjgfjfgjgfjfgjfg', '2015-02-12'),
+(22, 'fghfghfhfdh', 'fdhfdhfdghfdhfdghfddfhdfh', '2015-02-12'),
+(23, 'ddd', 'dddd', '2015-02-12'),
+(24, 'jjjjjk', 'kkkkuuiuiuiu', '2015-02-12'),
+(25, 'qqqqqq', 'rrrrr', '2015-02-12'),
+(26, 'tttttt', 'uuuuuu', '2015-02-12'),
+(27, 'ooooo', 'oasas', '2015-02-12'),
+(28, 'bbbbbb', 'nnnnn', '2015-02-12'),
+(29, 'hjjhjhj', 'ggggg', '2015-02-12'),
+(30, 'ioioioioio', 'uiuiuiui', '2015-02-12'),
+(31, 'opopopo', 'oooo', '2015-02-12'),
+(32, '67676', 'yjhnbn', '2015-02-12'),
+(33, '234324', 'nmmnmnm', '2015-02-12'),
+(34, '2324234', '11213123', '2015-02-12'),
+(35, '567567567', '3433345', '2015-02-12'),
+(36, 'er3e', 'fhjgh', '2015-02-12'),
+(37, 'descubrimos un nuevo gorila...', '<b>Los gorilas (género Gorilla) son primates herbívoros</b> que habitan los bosques de África central. Es el más grande de los primates vivos. Su ADN está compuesto de 3.041.976.159 pares de bases que codifican 20.962 genes proteicos compuestos de 237.216 exones.1 Su ADN es un 97%–98% igual al humano, siendo el más cercano a éste después de las dos especies de chimpancé.\r\n\r\nEl físico y misionero estadounidense Thomas Staughton Savage fue el primero en describir el gorila occidental, al que llamó Troglodytes gorilla, en 1847 a partir de especímenes obtenidos en Liberia. El nombre es derivado de la palabra griega ???????? (gorillai), que designaba a una «tribu de mujeres peludas», pero también de hombres con cola de caballo que, portando antorchas, asaltaban los barcos y torturaban y violaban a las mujeres que los marineros les ofrecían, descrita por Hannón el Navegante.', '2015-02-12'),
+(38, 'Ahora vamos a hacer una prueba con el complemento ', '<p>apretando retur</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>ahora negrita </strong><em>ahora&nbsp;italic <sub>ahora italic y subindice</sub></em></p>\r\n\r\n<p><em><sub><span dir="ltr" lang="es"><a href="http://localhost/basic/web/index.php/PagEdit/novedades/create">http://localhost/basic/web/index.php/PagEdit/novedades/create</a>&nbsp;</span></sub></em></p>\r\n\r\n<p style="text-align: center;"><em><sub><span dir="ltr" lang="es">ahora centrado!</span></sub></em></p>\r\n\r\n<p style="text-align: center;">&nbsp;</p>\r\n\r\n<p style="text-align: center;">&nbsp;</p>\r\n', '2015-02-13'),
+(39, 'prueba con img', '<p><img alt="img de prueba" src="http://www.fmdelriotunuyan.com.ar/sites/default/files/precio-barato-seguro-auto234588.jpg" style="height:56px; width:100px" /></p>\r\n', '2015-02-13'),
+(44, 'probando 2', '<p>sss</p>\r\n', '2015-02-17'),
+(45, 'prueba3', '<blockquote>\r\n<p>sssssssssss<em>dddddddddddddddd</em>ddddddddddddddddddd<strong>ssssssssssssssssssddddddddd</strong></p>\r\n</blockquote>\r\n\r\n<p>&nbsp;</p>\r\n', '2015-02-17'),
+(50, 'ahora otra prueba ', '<p>el objetivo es ver que no se redirija &nbsp;a la vista view de este campo una vez terminado de escribir el texto</p>\r\n', '2015-02-17');
 
 -- --------------------------------------------------------
 
@@ -124,15 +96,19 @@ CREATE TABLE IF NOT EXISTS `suscripciones` (
   `nombre` varchar(45) NOT NULL,
   `tipo` varchar(20) NOT NULL,
   `verificado` tinyint(1) NOT NULL,
-  `codigo` varchar(60) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- Volcar la base de datos para la tabla `suscripciones`
+-- Volcado de datos para la tabla `suscripciones`
 --
 
-INSERT INTO `suscripciones` (`id`, `mail`, `nombre`, `tipo`, `verificado`, `codigo`) VALUES
-(28, 'maikndawer@gmail.com', 'laion diaz', 'semanal', 1, '8981a92bca36bbedabb30cc07a3a9cf8'),
-(29, 'albertogagetti@gmail.com', 'Alberto Gagetti', 'semanal', 0, 'faaf8c0a04f1661393e07774d0b373b3');
+INSERT INTO `suscripciones` (`id`, `mail`, `nombre`, `tipo`, `verificado`) VALUES
+(8, 'wqdqwd', 'qwdqwd', 'semanal', 0),
+(9, 'maikndawer@gmail.com', 'leonardo', 'mensual', 0),
+(10, 'asd', 'asd', 'semanal', 0);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,19 @@
+<?php
+	namespace app\modules\webplayer\models;
+
+	use yii\base\Model;
+	use yii\helpers\BaseJson;
+	
+	use app\modules\webplayer\models\AmpacheImagen;
+	
+	class imagenalbum extends Model
+	{
+		public $album;		
+		    	
+    	public function Imagen(){
+    		$Modelo=new AmpacheImagen;
+    		$Consulta=$Modelo::find()->where(['id' => $this->album])->one();
+    		header("Content-type:".$Consulta->mime);
+    		echo $Consulta->image;
+    	}
+	}
